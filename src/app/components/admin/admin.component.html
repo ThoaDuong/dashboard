@@ -1,0 +1,48 @@
+<section>
+  <div class="sidebar">
+    <div class="sidebar__menu">
+      <div class="user">
+        <img class="user__avt" src="{{ user ? user.avatar_url : '' }} " alt="User's avatar">
+        <h2 class="user--color">{{ user ? user.username : '' }} </h2>
+        <span class="user--color"> {{ user ? user.email : '' }} </span>
+      </div>
+      <div class="menu">
+        <mat-list role="list">
+          <mat-list-item role="listitem">
+            <a class="menu__item" routerLink="../repos">
+              <i class="fas fa-book"></i>
+              Repositories
+            </a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a class="menu__item" routerLink="issues">
+              <i class="fas fa-exclamation-circle"></i>
+              Issues
+            </a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a class="menu__item" routerLink="projects">
+              <i class="fas fa-tasks"></i>
+              Projects
+            </a>
+          </mat-list-item>
+        </mat-list>
+        <mat-list role="list" class="logout">
+          <mat-list-item role="listitem">
+            <a class="menu__item" routerLink="../login">
+              <i class="fas fa-sign-in-alt"></i>
+              Logout
+            </a>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+    <div class="sidebar__content">
+      <mat-card class="example-card">
+
+        <router-outlet></router-outlet>
+
+      </mat-card>
+    </div>
+  </div>
+</section>

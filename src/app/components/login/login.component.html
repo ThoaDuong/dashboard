@@ -1,0 +1,40 @@
+<section>
+  <mat-grid-list cols="2" rowHeight="100vh">
+    <mat-grid-tile>
+      <img class="login-img" src="../../../assets/images/github.jpg" alt="Github">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <section>
+        <h2 class="title">Login</h2>
+
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password">
+          </mat-form-field>
+
+          <div class="form-button">
+            <button mat-raised-button color="primary" type="button">Login</button>
+            <a class="form-button__register" href="#">Register here</a>
+          </div>
+        </form>
+
+        <div class="or">
+          <span class="border"></span>
+          <span class="text">or</span>
+          <span class="border"></span>
+        </div>
+
+        <button (click)="loginWithGithub()" class="btn-github" mat-raised-button type="button">
+          <i class="fab fa-github"></i>
+          Login with Github
+        </button>
+      </section>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>
